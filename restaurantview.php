@@ -8,16 +8,16 @@
 <!--create table structure using HTML first-->
 <table border="1">
 <tr>
-<th>Restaurant ID</th>
-<th>Restaurant Name</th>
-<th>Address</th>
-<th>Phone</th>
+   <th>Restaurant ID</th>
+   <th>Restaurant Name</th>
+   <th>Address</th>
+   <th>Phone</th>
 </tr>
 <tr>
-<th>0</th>
-<th>Subway Restaurant</th>
-<th>Menara Standard Chartered, TPM</th>
-<th>03-22441234</th>
+   <th>0</th>
+   <th>Subway Restaurant</th>
+   <th>Menara Standard Chartered, TPM</th>
+   <th>03-22441234</th>
 </tr>
 </table>
 </center>
@@ -42,6 +42,7 @@ if ($getResults == FALSE)
 {
   die(sqlsrv_errors());
 }
+echo "<table>";
 while ($row = sqlsrv_fetch_array($getResults, SQLSRV_FETCH_ASSOC))
 {
    echo "<tr>";
@@ -51,6 +52,7 @@ while ($row = sqlsrv_fetch_array($getResults, SQLSRV_FETCH_ASSOC))
    echo "<td>". $row['restaurant_phone'] . "</td>";
    echo "</tr>";
 }
+echo "</table>";
 sqlsrv_free_stmt($getResults);
 ?>
 
