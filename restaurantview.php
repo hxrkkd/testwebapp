@@ -2,7 +2,7 @@
 $serverName = "testphptp041964.database.windows.net";
 $connectionOptions = array(
 "Database" => "testPhpTp041964",
-"Uid" => "Tp041964",
+"Uid" => "TP041964",
 "PWD" => "Apu123456");
 //Establishes the connection
 $conn = sqlsrv_connect($serverName, $connectionOptions);
